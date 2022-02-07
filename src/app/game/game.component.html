@@ -4,12 +4,12 @@
 <div class="field">
     <div class="cardStack">
           <!-- card stack-->
-        <img [ngStyle]="{'right.px': i*5}" *ngFor="let card of [0,1,2,3]; let i = index;" src="/assets/img/cards/purple_back.png" alt="">
-        <img (click)="takeCard()" class="topCard"   style="right: 25px;" src="/assets/img/cards/purple_back.png" alt="">
+        <img [ngStyle]="{'right.px': i*5}" *ngFor="let card of [0,1,2,3]; let i = index;" src="assets/img/cards/purple_back.png" alt="">
+        <img (click)="takeCard()" class="topCard"   style="right: 25px;" src="assets/img/cards/purple_back.png" alt="">
        <!-- Stack for played Cards-->
-        <img *ngFor="let card of this.game.playedCards" class="playedCard" src="/assets/img/cards/{{ card }}.png" alt="">
+        <img *ngFor="let card of this.game.playedCards" class="playedCard" src="assets/img/cards/{{ card }}.png" alt="">
         <!-- currentCard-->
-        <img (click)="takeCard()" *ngIf="takeCardAnimation" class="takeCard" style="right: 25px;" src="/assets/img/cards/{{ currentCard }}.png" alt="">
+        <img (click)="takeCard()" *ngIf="takeCardAnimation" class="takeCard" style="right: 25px;" src="assets/img/cards/{{ currentCard }}.png" alt="">
     </div>
 </div>
 <app-game-info [card]="currentCard" class="pinBottom"></app-game-info>
