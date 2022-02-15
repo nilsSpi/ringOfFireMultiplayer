@@ -55,11 +55,11 @@ export class GameComponent implements OnInit {
       this.game.currentCard = <string>this.game.stack.pop();
       console.log(this.game.currentCard);
       this.game.takeCardAnimation = true;
-      this.saveGame();
+     
 
       this.game.currentPlayer++;
       this.game.currentPlayer=this.game.currentPlayer%this.game.players.length;
-
+      this.saveGame();
       setTimeout(() =>{
         this.game.playedCards.push(this.game.currentCard);
         this.game.takeCardAnimation = false;
